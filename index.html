@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Aquaculture AIoT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <i class="fas fa-fish"></i>
+                <h1>Smart Aquaculture AIoT Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <span id="current-time">04:40 PM</span>
+                <button class="btn-icon"><i class="fas fa-sync-alt"></i></button>
+                <button class="btn-icon"><i class="fas fa-cog"></i></button>
+            </div>
+        </header>
+
+        <!-- Sensor Grid -->
+        <div class="sensor-grid">
+            <!-- Temperature Card -->
+            <div class="sensor-card temperature">
+                <div class="card-header">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h3>SUHU AIR</h3>
+                </div>
+                <div class="card-value">20°C</div>
+                <div class="card-gauge">
+                    <div class="gauge-track">
+                        <div class="gauge-fill" style="width: 50%"></div>
+                        <div class="gauge-thumb" style="left: 50%"></div>
+                    </div>
+                    <div class="gauge-labels">
+                        <span>15°C</span>
+                        <span>30°C</span>
+                    </div>
+                </div>
+                <div class="card-status status-normal">
+                    <i class="fas fa-check-circle"></i> Normal
+                </div>
+            </div>
+
+            <!-- pH Card -->
+            <div class="sensor-card ph">
+                <div class="card-header">
+                    <i class="fas fa-flask"></i>
+                    <h3>pH AIR</h3>
+                </div>
+                <div class="card-value">5.0</div>
+                <div class="card-gauge">
+                    <div class="gauge-track">
+                        <div class="gauge-fill" style="width: 20%"></div>
+                        <div class="gauge-thumb" style="left: 20%"></div>
+                    </div>
+                    <div class="gauge-labels">
+                        <span>4.5</span>
+                        <span>Ideal: 6.5-7.5</span>
+                    </div>
+                </div>
+                <div class="card-status status-warning">
+                    <i class="fas fa-exclamation-triangle"></i> Asam!
+                </div>
+            </div>
+
+            <!-- Oxygen Card -->
+            <div class="sensor-card oxygen">
+                <div class="card-header">
+                    <i class="fas fa-wind"></i>
+                    <h3>OKSIGEN TERLARUT</h3>
+                </div>
+                <div class="card-value">5.5 mg/L</div>
+                <div class="card-gauge">
+                    <div class="gauge-track">
+                        <div class="gauge-fill" style="width: 55%"></div>
+                        <div class="gauge-thumb" style="left: 55%"></div>
+                    </div>
+                    <div class="gauge-labels">
+                        <span>0</span>
+                        <span>Ideal: >6 mg/L</span>
+                    </div>
+                </div>
+                <div class="card-status status-warning">
+                    <i class="fas fa-exclamation-triangle"></i> Rendah!
+                </div>
+            </div>
+
+            <!-- Turbidity Card -->
+            <div class="sensor-card turbidity">
+                <div class="card-header">
+                    <i class="fas fa-water"></i>
+                    <h3>KERUHAN AIR</h3>
+                </div>
+                <div class="card-value">10 NTU</div>
+                <div class="card-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div class="card-status status-warning">
+                    <i class="fas fa-exclamation-triangle"></i> Sedikit Keruh
+                </div>
+            </div>
+
+            <!-- Food Stock Card -->
+            <div class="sensor-card food">
+                <div class="card-header">
+                    <i class="fas fa-utensils"></i>
+                    <h3>STOK PAKAN</h3>
+                </div>
+                <div class="card-value">60%</div>
+                <div class="card-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="card-status status-normal">
+                    <i class="fas fa-check-circle"></i> Cukup
+                </div>
+            </div>
+
+            <!-- Fish Population Card -->
+            <div class="sensor-card population">
+                <div class="card-header">
+                    <i class="fas fa-fish"></i>
+                    <h3>POPULASI IKAN</h3>
+                </div>
+                <div class="card-value">
+                    <span class="stars">★★★</span>
+                </div>
+                <div class="fish-animation">
+                    <i class="fas fa-fish"></i>
+                    <i class="fas fa-fish"></i>
+                    <i class="fas fa-fish"></i>
+                </div>
+                <div class="card-status status-normal">
+                    <i class="fas fa-check-circle"></i> Optimal
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Control Panel -->
+        <div class="control-panel">
+            <div class="panel-header">
+                <h2><i class="fas fa-robot"></i> AI CONTROL CENTER</h2>
+                <div class="mode-toggle">
+                    <button class="btn-mode active">AUTO</button>
+                    <button class="btn-mode">MANUAL</button>
+                </div>
+            </div>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <i class="fas fa-filter"></i>
+                    <h4>FILTER AIR</h4>
+                    <div class="control-status active">AKTIF</div>
+                    <div class="control-timer">2 menit</div>
+                    <div class="control-slider">
+                        <input type="range" min="0" max="100" value="60" class="slider">
+                    </div>
+                </div>
+                <div class="control-item">
+                    <i class="fas fa-fire"></i>
+                    <h4>HEATER</h4>
+                    <div class="control-status">NONAKTIF</div>
+                    <div class="control-timer">Standby</div>
+                    <div class="control-slider">
+                        <input type="range" min="0" max="100" value="0" class="slider">
+                    </div>
+                </div>
+                <div class="control-item">
+                    <i class="fas fa-wind"></i>
+                    <h4>AERATOR</h4>
+                    <div class="control-status active">AKTIF</div>
+                    <div class="control-timer">15 menit</div>
+                    <div class="control-slider">
+                        <input type="range" min="0" max="100" value="75" class="slider">
+                    </div>
+                </div>
+                <div class="control-item">
+                    <i class="fas fa-utensils"></i>
+                    <h4>FEEDER</h4>
+                    <div class="control-status scheduled">TERJADWAL</div>
+                    <div class="control-timer">Next: 12:00</div>
+                    <div class="control-slider">
+                        <input type="range" min="0" max="100" value="30" class="slider">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="notifications-panel">
+            <div class="panel-header">
+                <h2><i class="fas fa-bell"></i> NOTIFIKASI TERBARU</h2>
+                <button class="btn-mark-read">Tandai Sudah Dibaca</button>
+            </div>
+            <div class="notifications-list">
+                <div class="notification-item success">
+                    <div class="notification-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-time">[10:15]</div>
+                        <div class="notification-message">Aerator aktif otomatis - Kadar oksigen rendah</div>
+                        <div class="notification-detail">DO: 4.8 mg/L → 5.5 mg/L</div>
+                    </div>
+                </div>
+                <div class="notification-item success">
+                    <div class="notification-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-time">[08:00]</div>
+                        <div class="notification-message">Pakan diberikan sesuai jadwal - 15g</div>
+                        <div class="notification-detail">98% ikan aktif makan</div>
+                    </div>
+                </div>
+                <div class="notification-item warning">
+                    <div class="notification-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-time">[07:30]</div>
+                        <div class="notification-message">pH turun di bawah normal - 4.8 detected</div>
+                        <div class="notification-detail">AI suggestion: Tambahkan buffer solution</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
